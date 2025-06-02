@@ -14,7 +14,9 @@
   }
 
   :root {
-    --background: 0 0% 100%;
+    --background-solid: rgba(245, 177, 46, 1.0);
+    --background: radial-gradient(at left top, rgba(245, 177, 46, 1.0), rgba(255, 166, 255, 1.0));
+
     --foreground: 222.2 84% 4.9%;
 
     --card: 240 5% 96%;
@@ -89,7 +91,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    @apply text-foreground min-h-[100vh] flex flex-col;
+    background-image: var(--background);
   }
 }
 

@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    html {
+    font-family: 'Montserrat', sans-serif;
+  }
   h1,
   h2,
   h3,
@@ -14,8 +20,7 @@
   }
 
   :root {
-    --background-solid: rgba(245, 177, 46, 1.0);
-    --background: radial-gradient(at left top, rgba(245, 177, 46, 1.0), rgba(255, 166, 255, 1.0));
+    --background:  rgba(186, 228, 229, 0.5);
 
     --foreground: 222.2 84% 4.9%;
 
@@ -25,10 +30,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 204, 100%, 29%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 174, 100%, 28%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -51,7 +56,7 @@
     --error: 10 100% 86%;
   }
 
-  [data-theme='dark'] {
+  /* [data-theme='dark'] {
     --background: 0 0% 0%;
     --foreground: 210 40% 98%;
 
@@ -83,7 +88,7 @@
     --success: 196 100% 14%;
     --warning: 34 51% 25%;
     --error: 10 39% 43%;
-  }
+  } */
 }
 
 @layer base {

@@ -20,7 +20,7 @@
   }
 
   :root {
-    --background:  rgba(186, 228, 229, 0.5);
+    --background:  rgba(255, 255, 255, 1);
 
     --foreground: 222.2 84% 4.9%;
 
@@ -97,7 +97,7 @@
   }
   body {
     @apply text-foreground min-h-[100vh] flex flex-col;
-    background-image: var(--background);
+    background-color: var(--background);
   }
 }
 

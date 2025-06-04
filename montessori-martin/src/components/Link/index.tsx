@@ -18,6 +18,7 @@ type CMSLinkType = {
   size?: ButtonProps['size'] | null
   type?: 'custom' | 'reference' | null
   url?: string | null
+  bold?: boolean
 }
 
 export const CMSLink: React.FC<CMSLinkType> = (props) => {
@@ -31,6 +32,7 @@ export const CMSLink: React.FC<CMSLinkType> = (props) => {
     reference,
     size: sizeFromProps,
     url,
+    bold = false,
   } = props
 
   const href =
@@ -49,7 +51,7 @@ export const CMSLink: React.FC<CMSLinkType> = (props) => {
   if (appearance === 'inline') {
     return (
       <Link
-        className={cn(className, 'font-bold text-primary')}
+        className={cn(className, bold && '!font-bold')}
         href={href || url || ''}
         {...newTabProps}
       >
@@ -60,8 +62,12 @@ export const CMSLink: React.FC<CMSLinkType> = (props) => {
   }
 
   return (
-    <Button asChild className={className} size={size} variant={appearance}>
-      <Link className={cn(className, 'font-bold')} href={href || url || ''} {...newTabProps}>
+    <Button asChild size={size} className={className} variant={appearance}>
+      <Link
+        className={cn(className, bold && '!font-bold')}
+        href={href || url || ''}
+        {...newTabProps}
+      >
         {label && label}
         {children && children}
       </Link>

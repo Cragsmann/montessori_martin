@@ -24,10 +24,10 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
             {subMenu && subMenu.length > 0 ? (
               <>
                 <NavigationMenuTrigger className="cursor-pointer px-0 ">
-                  <CMSLink {...link} appearance="inline" className="pointer-events-none" />
+                  <CMSLink {...link} appearance="inline" className="text-primary" bold />
                 </NavigationMenuTrigger>
 
-                <NavigationMenuContent className="p-4 rounded-lg shadow-md">
+                <NavigationMenuContent className="p-2 !rounded-md shadow-md ">
                   <ul className="flex flex-col gap-2">
                     {subMenu.map((subItem, j) => (
                       <li key={j}>
@@ -36,6 +36,7 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
                             {...subItem.link}
                             appearance="link"
                             className="block px-4 py-2 "
+                            bold
                           />
                         </NavigationMenuLink>
                       </li>
@@ -45,7 +46,7 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
               </>
             ) : (
               <NavigationMenuLink asChild>
-                <CMSLink {...link} appearance="link" />
+                <CMSLink {...link} appearance="link" bold />
               </NavigationMenuLink>
             )}
           </NavigationMenuItem>

@@ -20,41 +20,50 @@
   }
 
   :root {
-    --background:  rgba(255, 255, 255, 1);
+  /* Base */
+  --background: 0 0% 100%; /* White */
+  --foreground: 222.2 84% 4.9%; /* Very dark navy (near black) */
 
-    --foreground: 222.2 84% 4.9%;
+  /* Surfaces */
+  --surface: 240 5% 96%; /* Soft light gray (background surface) */
+  --surface-foreground: var(--foreground); /* Text on surface */
 
-    --card: 240 5% 96%;
-    --card-foreground: 222.2 84% 4.9%;
+  --overlay: 0 0% 100%; /* White overlay (e.g. modal background) */
+  --overlay-foreground: var(--foreground); /* Text on overlay */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+  /* Brand Colors */
+  --primary: 204 100% 29%; /* Strong blue (main brand color) */
+  --primary-foreground: 210 40% 98%; /* Near-white text on primary */
 
-    --primary: 204, 100%, 29%;
-    --primary-foreground: 210 40% 98%;
+  --secondary: 174 100% 28%; /* Teal green (accent brand color) */
+  --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on secondary */
 
-    --secondary: 174, 100%, 28%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+  /* UI Neutrals */
+  --muted: 210 40% 96.1%; /* Very light gray (muted background) */
+  --muted-foreground: 215.4 16.3% 46.9%; /* Medium gray text */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 98%; /* Very pale blue (hover, highlights) */
+  --accent-foreground: 222.2 47.4% 11.2%; /* Deep navy text on accent */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+  /* System Feedback */
+  --success: 160 84% 39%; /* Emerald green */
+  --success-foreground: 0 0% 100%; /* White on success */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+  --warning: 35 100% 50%; /* Bright amber/orange */
+  --warning-foreground: 0 0% 0%; /* Black on warning */
 
-    --border: 240 6% 80%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+  --error: 0 84% 60%; /* Strong red */
+  --error-foreground: 0 0% 100%; /* White on error */
 
-    --radius: 0.2rem;
+  /* Borders & Inputs */
+  --border: 240 6% 85%; /* Light gray border */
+  --input: 214.3 31.8% 91.4%; /* Soft gray input bg */
+  --ring: 204 100% 40%; /* Blue ring focus */
 
-    --success: 196 52% 74%;
-    --warning: 34 89% 85%;
-    --error: 10 100% 86%;
-  }
+  /* Radius & spacing */
+  --radius: 0.2rem;
+  --spacing: 0.2rem;
+}
 
   /* [data-theme='dark'] {
     --background: 0 0% 0%;
